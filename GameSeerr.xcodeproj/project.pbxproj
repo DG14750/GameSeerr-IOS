@@ -9,21 +9,49 @@
 /* Begin PBXBuildFile section */
 		05EC3DD52EB5D40A00103816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD42EB5D40A00103816 /* AppDelegate.swift */; };
 		05EC3DD72EB5D40A00103816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD62EB5D40A00103816 /* SceneDelegate.swift */; };
-		05EC3DD92EB5D40A00103816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD82EB5D40A00103816 /* ViewController.swift */; };
+		05EC3DD92EB5D40A00103816 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD82EB5D40A00103816 /* LoginViewController.swift */; };
 		05EC3DDC2EB5D40A00103816 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05EC3DDB2EB5D40A00103816 /* Base */; };
 		05EC3DDE2EB5D40D00103816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05EC3DDD2EB5D40D00103816 /* Assets.xcassets */; };
 		05EC3DE12EB5D40D00103816 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05EC3DE02EB5D40D00103816 /* Base */; };
+		05EC3DE92EB5D45C00103816 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05EC3DE82EB5D45C00103816 /* GoogleService-Info.plist */; };
+		05EC3DEC2EB5D6B500103816 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 05EC3DEB2EB5D6B500103816 /* FirebaseAuth */; };
+		05EC3DEE2EB5D6B500103816 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 05EC3DED2EB5D6B500103816 /* FirebaseFirestore */; };
+		05EC3E032EB5DD6D00103816 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DFE2EB5DD6D00103816 /* SignUpViewController.swift */; };
+		05EC3E052EB5DD9800103816 /* GamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E042EB5DD9800103816 /* GamesRepository.swift */; };
+		05EC3E072EB5DDB500103816 /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E062EB5DDB500103816 /* UsersRepository.swift */; };
+		05EC3E092EB5DDD200103816 /* ReviewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E082EB5DDD200103816 /* ReviewsRepository.swift */; };
+		05EC3E0B2EB5DDE700103816 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E0A2EB5DDE700103816 /* Game.swift */; };
+		05EC3E0D2EB5DDFF00103816 /* GameSeerrErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E0C2EB5DDFF00103816 /* GameSeerrErrors.swift */; };
+		05EC3E0F2EB5DE1100103816 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E0E2EB5DE1100103816 /* Review.swift */; };
+		05EC3E112EB5DE2000103816 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E102EB5DE1F00103816 /* User.swift */; };
+		05EC3E132EB5DE9200103816 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E122EB5DE9200103816 /* FirebaseManager.swift */; };
+		05EC3E172EB5DF1400103816 /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E162EB5DF1400103816 /* GamesListViewController.swift */; };
+		05EC3E192EB5DF3400103816 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E182EB5DF3400103816 /* GameDetailViewController.swift */; };
+		05EC3E1B2EB5DF4C00103816 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E1A2EB5DF4C00103816 /* AddReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05EC3DD12EB5D40A00103816 /* GameSeerr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSeerr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EC3DD42EB5D40A00103816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05EC3DD62EB5D40A00103816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05EC3DD82EB5D40A00103816 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05EC3DD82EB5D40A00103816 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		05EC3DDB2EB5D40A00103816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05EC3DDD2EB5D40D00103816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05EC3DE02EB5D40D00103816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05EC3DE22EB5D40D00103816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05EC3DE82EB5D45C00103816 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		05EC3DFE2EB5DD6D00103816 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		05EC3E042EB5DD9800103816 /* GamesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesRepository.swift; sourceTree = "<group>"; };
+		05EC3E062EB5DDB500103816 /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
+		05EC3E082EB5DDD200103816 /* ReviewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsRepository.swift; sourceTree = "<group>"; };
+		05EC3E0A2EB5DDE700103816 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		05EC3E0C2EB5DDFF00103816 /* GameSeerrErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSeerrErrors.swift; sourceTree = "<group>"; };
+		05EC3E0E2EB5DE1100103816 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		05EC3E102EB5DE1F00103816 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		05EC3E122EB5DE9200103816 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		05EC3E162EB5DF1400103816 /* GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
+		05EC3E182EB5DF3400103816 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
+		05EC3E1A2EB5DF4C00103816 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05EC3DEC2EB5D6B500103816 /* FirebaseAuth in Frameworks */,
+				05EC3DEE2EB5D6B500103816 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +86,76 @@
 		05EC3DD32EB5D40A00103816 /* GameSeerr */ = {
 			isa = PBXGroup;
 			children = (
+				05EC3DFF2EB5DD6D00103816 /* Auth */,
+				05EC3E002EB5DD6D00103816 /* Common */,
+				05EC3DFC2EB5DD6D00103816 /* Firebase */,
+				05EC3E012EB5DD6D00103816 /* Games */,
+				05EC3DF72EB5DD6D00103816 /* Repository */,
 				05EC3DD42EB5D40A00103816 /* AppDelegate.swift */,
 				05EC3DD62EB5D40A00103816 /* SceneDelegate.swift */,
-				05EC3DD82EB5D40A00103816 /* ViewController.swift */,
 				05EC3DDA2EB5D40A00103816 /* Main.storyboard */,
 				05EC3DDD2EB5D40D00103816 /* Assets.xcassets */,
 				05EC3DDF2EB5D40D00103816 /* LaunchScreen.storyboard */,
 				05EC3DE22EB5D40D00103816 /* Info.plist */,
+				05EC3DE82EB5D45C00103816 /* GoogleService-Info.plist */,
 			);
 			path = GameSeerr;
+			sourceTree = "<group>";
+		};
+		05EC3DF42EB5DD6D00103816 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05EC3E0A2EB5DDE700103816 /* Game.swift */,
+				05EC3E0C2EB5DDFF00103816 /* GameSeerrErrors.swift */,
+				05EC3E0E2EB5DE1100103816 /* Review.swift */,
+				05EC3E102EB5DE1F00103816 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05EC3DF72EB5DD6D00103816 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				05EC3DF42EB5DD6D00103816 /* Model */,
+				05EC3E042EB5DD9800103816 /* GamesRepository.swift */,
+				05EC3E062EB5DDB500103816 /* UsersRepository.swift */,
+				05EC3E082EB5DDD200103816 /* ReviewsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		05EC3DFC2EB5DD6D00103816 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				05EC3E122EB5DE9200103816 /* FirebaseManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		05EC3DFF2EB5DD6D00103816 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				05EC3DD82EB5D40A00103816 /* LoginViewController.swift */,
+				05EC3DFE2EB5DD6D00103816 /* SignUpViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		05EC3E002EB5DD6D00103816 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		05EC3E012EB5DD6D00103816 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				05EC3E162EB5DF1400103816 /* GamesListViewController.swift */,
+				05EC3E182EB5DF3400103816 /* GameDetailViewController.swift */,
+				05EC3E1A2EB5DF4C00103816 /* AddReviewViewController.swift */,
+			);
+			path = Games;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +174,10 @@
 			dependencies = (
 			);
 			name = GameSeerr;
+			packageProductDependencies = (
+				05EC3DEB2EB5D6B500103816 /* FirebaseAuth */,
+				05EC3DED2EB5D6B500103816 /* FirebaseFirestore */,
+			);
 			productName = GameSeerr;
 			productReference = 05EC3DD12EB5D40A00103816 /* GameSeerr.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +206,9 @@
 				Base,
 			);
 			mainGroup = 05EC3DC82EB5D40A00103816;
+			packageReferences = (
+				05EC3DEA2EB5D6B500103816 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 05EC3DD22EB5D40A00103816 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05EC3DDE2EB5D40D00103816 /* Assets.xcassets in Resources */,
+				05EC3DE92EB5D45C00103816 /* GoogleService-Info.plist in Resources */,
 				05EC3DE12EB5D40D00103816 /* Base in Resources */,
 				05EC3DDC2EB5D40A00103816 /* Base in Resources */,
 			);
@@ -138,9 +237,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05EC3DD92EB5D40A00103816 /* ViewController.swift in Sources */,
+				05EC3E132EB5DE9200103816 /* FirebaseManager.swift in Sources */,
+				05EC3E0B2EB5DDE700103816 /* Game.swift in Sources */,
+				05EC3E072EB5DDB500103816 /* UsersRepository.swift in Sources */,
+				05EC3E1B2EB5DF4C00103816 /* AddReviewViewController.swift in Sources */,
+				05EC3E052EB5DD9800103816 /* GamesRepository.swift in Sources */,
+				05EC3E0D2EB5DDFF00103816 /* GameSeerrErrors.swift in Sources */,
+				05EC3DD92EB5D40A00103816 /* LoginViewController.swift in Sources */,
+				05EC3E0F2EB5DE1100103816 /* Review.swift in Sources */,
+				05EC3E192EB5DF3400103816 /* GameDetailViewController.swift in Sources */,
 				05EC3DD52EB5D40A00103816 /* AppDelegate.swift in Sources */,
+				05EC3E112EB5DE2000103816 /* User.swift in Sources */,
+				05EC3E172EB5DF1400103816 /* GamesListViewController.swift in Sources */,
 				05EC3DD72EB5D40A00103816 /* SceneDelegate.swift in Sources */,
+				05EC3E032EB5DD6D00103816 /* SignUpViewController.swift in Sources */,
+				05EC3E092EB5DDD200103816 /* ReviewsRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +472,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05EC3DEA2EB5D6B500103816 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 11.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05EC3DEB2EB5D6B500103816 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EC3DEA2EB5D6B500103816 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		05EC3DED2EB5D6B500103816 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EC3DEA2EB5D6B500103816 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05EC3DC92EB5D40A00103816 /* Project object */;
 }

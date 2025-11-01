@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcuserdata/
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcworkspace/xcuserdata
+*.xcscmblueprint
+*.xcuserdatad
+
+# Swift Package Manager
+/.build
+/Packages
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Firebase
+GoogleService-Info.plist
+
+# User data
+*.log
