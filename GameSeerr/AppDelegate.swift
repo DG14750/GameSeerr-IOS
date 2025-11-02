@@ -8,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     FirebaseApp.configure()
     print("Firebase configured")
-      FirebaseManager.shared.authenticatedPing()
+      // FirebaseManager.shared.authenticatedPing()
     return true
   }
 }

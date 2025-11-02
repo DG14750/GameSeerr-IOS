@@ -12,7 +12,6 @@
 		05EC3DD92EB5D40A00103816 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD82EB5D40A00103816 /* LoginViewController.swift */; };
 		05EC3DDC2EB5D40A00103816 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05EC3DDB2EB5D40A00103816 /* Base */; };
 		05EC3DDE2EB5D40D00103816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05EC3DDD2EB5D40D00103816 /* Assets.xcassets */; };
-		05EC3DE12EB5D40D00103816 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05EC3DE02EB5D40D00103816 /* Base */; };
 		05EC3DE92EB5D45C00103816 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05EC3DE82EB5D45C00103816 /* GoogleService-Info.plist */; };
 		05EC3DEC2EB5D6B500103816 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 05EC3DEB2EB5D6B500103816 /* FirebaseAuth */; };
 		05EC3DEE2EB5D6B500103816 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 05EC3DED2EB5D6B500103816 /* FirebaseFirestore */; };
@@ -28,6 +27,8 @@
 		05EC3E172EB5DF1400103816 /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E162EB5DF1400103816 /* GamesListViewController.swift */; };
 		05EC3E192EB5DF3400103816 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E182EB5DF3400103816 /* GameDetailViewController.swift */; };
 		05EC3E1B2EB5DF4C00103816 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E1A2EB5DF4C00103816 /* AddReviewViewController.swift */; };
+		05EC3E1D2EB5E88700103816 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E1C2EB5E88700103816 /* Extensions.swift */; };
+		05EC3E1F2EB5E93400103816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E1E2EB5E93400103816 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,6 @@
 		05EC3DD82EB5D40A00103816 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		05EC3DDB2EB5D40A00103816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05EC3DDD2EB5D40D00103816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05EC3DE02EB5D40D00103816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05EC3DE22EB5D40D00103816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05EC3DE82EB5D45C00103816 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05EC3DFE2EB5DD6D00103816 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +52,8 @@
 		05EC3E162EB5DF1400103816 /* GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
 		05EC3E182EB5DF3400103816 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		05EC3E1A2EB5DF4C00103816 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
+		05EC3E1C2EB5E88700103816 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		05EC3E1E2EB5E93400103816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,6 @@
 				05EC3DD62EB5D40A00103816 /* SceneDelegate.swift */,
 				05EC3DDA2EB5D40A00103816 /* Main.storyboard */,
 				05EC3DDD2EB5D40D00103816 /* Assets.xcassets */,
-				05EC3DDF2EB5D40D00103816 /* LaunchScreen.storyboard */,
 				05EC3DE22EB5D40D00103816 /* Info.plist */,
 				05EC3DE82EB5D45C00103816 /* GoogleService-Info.plist */,
 			);
@@ -144,6 +145,8 @@
 		05EC3E002EB5DD6D00103816 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				05EC3E1C2EB5E88700103816 /* Extensions.swift */,
+				05EC3E1E2EB5E93400103816 /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -225,7 +228,6 @@
 			files = (
 				05EC3DDE2EB5D40D00103816 /* Assets.xcassets in Resources */,
 				05EC3DE92EB5D45C00103816 /* GoogleService-Info.plist in Resources */,
-				05EC3DE12EB5D40D00103816 /* Base in Resources */,
 				05EC3DDC2EB5D40A00103816 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05EC3E132EB5DE9200103816 /* FirebaseManager.swift in Sources */,
+				05EC3E1F2EB5E93400103816 /* Constants.swift in Sources */,
 				05EC3E0B2EB5DDE700103816 /* Game.swift in Sources */,
 				05EC3E072EB5DDB500103816 /* UsersRepository.swift in Sources */,
 				05EC3E1B2EB5DF4C00103816 /* AddReviewViewController.swift in Sources */,
@@ -248,6 +251,7 @@
 				05EC3E192EB5DF3400103816 /* GameDetailViewController.swift in Sources */,
 				05EC3DD52EB5D40A00103816 /* AppDelegate.swift in Sources */,
 				05EC3E112EB5DE2000103816 /* User.swift in Sources */,
+				05EC3E1D2EB5E88700103816 /* Extensions.swift in Sources */,
 				05EC3E172EB5DF1400103816 /* GamesListViewController.swift in Sources */,
 				05EC3DD72EB5D40A00103816 /* SceneDelegate.swift in Sources */,
 				05EC3E032EB5DD6D00103816 /* SignUpViewController.swift in Sources */,
@@ -264,14 +268,6 @@
 				05EC3DDB2EB5D40A00103816 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		05EC3DDF2EB5D40D00103816 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05EC3DE02EB5D40D00103816 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

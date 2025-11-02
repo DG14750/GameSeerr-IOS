@@ -1,9 +1,9 @@
 //
-//  GameSeerrErrors.swift
+//  Constants.swift
 //  GameSeerr
 //
 //  Created by Dean Goodwin on 1/11/2025.
 //
-// Check week 6/7 to see alex's error handling
+// Paths, colors etc
 
 import Foundation
