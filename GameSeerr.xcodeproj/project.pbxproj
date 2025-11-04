@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053313142EBA289E009EA61E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053313132EBA289E009EA61E /* HomeViewController.swift */; };
 		05EC3DD52EB5D40A00103816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD42EB5D40A00103816 /* AppDelegate.swift */; };
 		05EC3DD72EB5D40A00103816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD62EB5D40A00103816 /* SceneDelegate.swift */; };
 		05EC3DD92EB5D40A00103816 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD82EB5D40A00103816 /* LoginViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053313132EBA289E009EA61E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		05EC3DD12EB5D40A00103816 /* GameSeerr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSeerr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EC3DD42EB5D40A00103816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05EC3DD62EB5D40A00103816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				05EC3E162EB5DF1400103816 /* GamesListViewController.swift */,
 				05EC3E182EB5DF3400103816 /* GameDetailViewController.swift */,
 				05EC3E1A2EB5DF4C00103816 /* AddReviewViewController.swift */,
+				053313132EBA289E009EA61E /* HomeViewController.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				05EC3E0B2EB5DDE700103816 /* Game.swift in Sources */,
 				05EC3E072EB5DDB500103816 /* UsersRepository.swift in Sources */,
 				05EC3E1B2EB5DF4C00103816 /* AddReviewViewController.swift in Sources */,
+				053313142EBA289E009EA61E /* HomeViewController.swift in Sources */,
 				05EC3E052EB5DD9800103816 /* GamesRepository.swift in Sources */,
 				05EC3E0D2EB5DDFF00103816 /* GameSeerrErrors.swift in Sources */,
 				05EC3DD92EB5D40A00103816 /* LoginViewController.swift in Sources */,
@@ -404,8 +408,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,8 +437,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
