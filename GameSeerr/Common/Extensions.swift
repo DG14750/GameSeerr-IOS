@@ -1,10 +1,8 @@
-//
+
 //  Extensions.swift
 //  GameSeerr
 //
-//  Created by Dean Goodwin on 1/11/2025.
-//
-//  Shared helpers for validation and UI alerts
+//  Shared helpers for validation and simple alerts
 //
 
 import UIKit
@@ -12,12 +10,12 @@ import Foundation
 
 // MARK: - String Helpers
 extension String {
-    /// True if the string is empty or only whitespace/newlines
+    /// quick check for empty or only spaces/newlines
     var isBlank: Bool {
         trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
-    
-    /// True if the string matches a valid email format
+
+    /// basic email regex
     var isValidEmail: Bool {
         let emailRegEx = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
         return NSPredicate(format: "SELF MATCHES %@", emailRegEx).evaluate(with: self)
@@ -26,30 +24,26 @@ extension String {
 
 // MARK: - Optional String Helpers
 extension Optional where Wrapped == String {
-    /// True if the optional is nil OR the wrapped string is blank
+    /// nil = blank, or wrapped string is blank
     var isBlank: Bool {
         switch self {
-        case .none:
-            return true
-        case .some(let value):
-            return value.isBlank
+        case .none: return true
+        case .some(let v): return v.isBlank
         }
     }
-    
-    /// True if non-nil and valid email
+
+    /// only true when non-nil AND valid email
     var isValidEmail: Bool {
         switch self {
-        case .none:
-            return false
-        case .some(let value):
-            return value.isValidEmail
+        case .none: return false
+        case .some(let v): return v.isValidEmail
         }
     }
 }
 
 // MARK: - UIViewController Helpers
 extension UIViewController {
-    /// Displays a simple alert with an OK button
+    /// small alert with one OK button (used across screens)
     func showAlertMessage(
         title: String,
         message: String,

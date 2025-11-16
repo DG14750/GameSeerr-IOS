@@ -10,8 +10,9 @@ import FirebaseFirestore
 
 final class WishlistViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var emptyLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
 
     // repos
     private let gamesRepo: GamesRepository = FirestoreGamesRepository()
@@ -158,17 +159,32 @@ final class WishlistViewController: UIViewController, UICollectionViewDataSource
 
         return cell
     }
-
-    // MARK: layout (card height = 16:9 image + labels)
-    func collectionView(_ cv: UICollectionView, layout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let flow = cv as? UICollectionViewFlowLayout
-              ?? collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-            let w = collectionView.bounds.width - 24
-            let imgH = (w - 24) * 9.0 / 16.0
-            return CGSize(width: w, height: imgH + 110)
+    
+    // MARK: - Layout (match Home card size)
+    func collectionView(_ cv: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // same layout as HomeViewController: full-width 16:9 card
+        guard let flow = cv.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return .zero
         }
-        let width = collectionView.bounds.width - flow.sectionInset.left - flow.sectionInset.right
+        let width = cv.bounds.width - flow.sectionInset.left - flow.sectionInset.right
         let imageHeight = (width - 24) * 9.0 / 16.0
         return CGSize(width: width, height: imageHeight + 110)
+    }
+    
+    // open detail when a card is tapped
+    func collectionView(_ cv: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let g = games[indexPath.item]
+        performSegue(withIdentifier: "showGameDetail", sender: g)
+    }
+
+    // hand the game to the detail screen
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showGameDetail",
+           let vc = segue.destination as? GameDetailViewController,
+           let g = sender as? Game {
+            vc.game = g
+        }
     }
 }

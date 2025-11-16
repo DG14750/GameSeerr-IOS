@@ -96,7 +96,7 @@ class LoginViewController: UIViewController {
                     }
                     // Success — close login screen
                     print("Login OK for: \(user.email ?? "unknown")")
-                    self.dismiss(animated: true) // or navigationController?.popViewController(animated: true)
+                    self.performSegue(withIdentifier: "presentMain", sender: self)
 
                 case .failure(let error):
                     let msg = FirebaseManager.shared.friendlyMessage(for: error)

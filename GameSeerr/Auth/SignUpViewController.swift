@@ -79,8 +79,11 @@ class SignUpViewController: UIViewController {
                         title: "Account Created",
                         message: "Welcome, \(username)! Please check your email to verify your account."
                     ) { _ in
-                        self.navigationController?.popViewController(animated: true)
-                        // Or self.dismiss(animated: true) if presented modally
+                        if let nav = self.navigationController {
+                            nav.popViewController(animated: true)
+                        } else {
+                            self.dismiss(animated: true)
+                        }
                     }
 
                 case .failure(let error):
