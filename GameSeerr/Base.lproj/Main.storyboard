@@ -29,7 +29,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DO7-AD-qIG">
                                 <rect key="frame" x="16" y="184" width="343" height="241.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRX-zX-HUb">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dean@example.com" borderStyle="roundedRect" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRX-zX-HUb">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="45"/>
                                         <color key="backgroundColor" name="ui.field"/>
                                         <accessibility key="accessibilityConfiguration" label="Email"/>
@@ -40,7 +40,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sil-xi-6a2">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sil-xi-6a2">
                                         <rect key="frame" x="0.0" y="57" width="343" height="45"/>
                                         <color key="backgroundColor" name="ui.field"/>
                                         <accessibility key="accessibilityConfiguration" label="Password:"/>
@@ -133,7 +133,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vyR-XF-gzi">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="bg.canvas"/>
+                        <color key="tintColor" name="state.success"/>
+                        <color key="barTintColor" name="bg.canvas"/>
                     </tabBar>
                     <connections>
                         <segue destination="cpW-6h-v0U" kind="relationship" relationship="viewControllers" id="7Gt-IH-lyi"/>
@@ -557,10 +559,10 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbb-Ku-wGn">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="585.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="838"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="S0H-t8-z2A">
-                                                <rect key="frame" x="16" y="16" width="343" height="553.5"/>
+                                                <rect key="frame" x="16" y="16" width="343" height="806"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DbF-ih-at5">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
@@ -677,6 +679,49 @@
                                                             <action selector="steamButton:" destination="KVT-kk-AzC" eventType="touchUpInside" id="gPM-eD-7j2"/>
                                                         </connections>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiS-T3-ODh">
+                                                        <rect key="frame" x="0.0" y="569.5" width="343" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="text.primary"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ToV-sy-uRO">
+                                                        <rect key="frame" x="0.0" y="606" width="343" height="200"/>
+                                                        <color key="backgroundColor" name="ui.field"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="FO1-aC-RPD"/>
+                                                        </constraints>
+                                                        <color key="separatorColor" name="bg.card"/>
+                                                        <color key="sectionIndexColor" name="text.primary"/>
+                                                        <color key="sectionIndexBackgroundColor" name="bg.card"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReviewCell" textLabel="LdC-8n-YnS" detailTextLabel="ygU-MI-6W1" style="IBUITableViewCellStyleSubtitle" id="YZu-DI-Tsl">
+                                                                <rect key="frame" x="0.0" y="50" width="343" height="43.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YZu-DI-Tsl" id="QDL-pe-Sqe">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LdC-8n-YnS">
+                                                                            <rect key="frame" x="16" y="6" width="25" height="14.5"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ygU-MI-6W1">
+                                                                            <rect key="frame" x="16" y="22.5" width="44" height="14.5"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </tableViewCellContentView>
+                                                                <color key="backgroundColor" name="ui.field"/>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                    </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" name="bg.card"/>
                                             </stackView>
@@ -710,7 +755,9 @@
                             <constraint firstItem="Fwk-h6-4h7" firstAttribute="bottom" secondItem="iF9-22-4Ba" secondAttribute="bottom" id="mhY-ID-1np"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bmb-av-BRZ"/>
+                    <navigationItem key="navigationItem" id="bmb-av-BRZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rNj-4Q-Uqd"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="aboutLabel" destination="IaA-wx-WDR" id="DH2-6x-Czv"/>
                         <outlet property="bodyLabel" destination="XB3-nd-2Td" id="Ga6-rE-9As"/>
@@ -724,6 +771,7 @@
                         <outlet property="platformButton2" destination="JTy-Nl-FvW" id="bYs-ZW-ngk"/>
                         <outlet property="platformLabel" destination="yNo-gA-Ti6" id="AxT-Eh-hJ7"/>
                         <outlet property="ratingButton" destination="XoE-K4-wvm" id="fyb-iK-166"/>
+                        <outlet property="reviewsTableView" destination="ToV-sy-uRO" id="mcg-RK-SM8"/>
                         <outlet property="wishlistButton" destination="rhA-Wd-AzG" id="k4D-LK-yTD"/>
                     </connections>
                 </viewController>
@@ -741,6 +789,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fvx-Ix-ceq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="bg.canvas"/>
+                        <color key="barTintColor" name="bg.canvas"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -791,6 +841,9 @@
         </namedColor>
         <namedColor name="brand.primary">
             <color red="0.18000000715255737" green="0.54100000858306885" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="state.success">
+            <color red="0.23499999940395355" green="0.79600000381469727" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="text.primary">
             <color red="0.90200001001358032" green="0.92900002002716064" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

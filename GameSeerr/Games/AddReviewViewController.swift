@@ -7,13 +7,60 @@
 
 import UIKit
 
-class AddReviewViewController: UIViewController {
+final class AddReviewViewController: UIViewController {
+
+    var game: Game!   // set from GameDetailViewController
+
+    private let reviewsRepo: ReviewsRepository = FirestoreReviewsRepository()
+    private let currentUserId = "TestUser"   // TODO: replace with FirebaseAuth uid later
+
+    @IBOutlet weak var ratingTextField: UITextField!
+    @IBOutlet weak var bodyTextView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = "Add Review"
     }
+
+    @IBAction func cancelTapped(_ sender: Any) {
+        dismiss(animated: true)
+    }
+
+    @IBAction func saveTapped(_ sender: Any) {
+        guard
+            let ratingText = ratingTextField.text,
+            let rating = Double(ratingText),
+            let body = bodyTextView.text,
+            !body.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        else {
+            // Basic validation
+            showAlert(title: "Oops", message: "Please enter a rating and review text.")
+            return
+        }
+
+        reviewsRepo.addReview(
+            gameId: game.id,
+            userId: currentUserId,
+            rating: rating,
+            body: body
+        ) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    self?.dismiss(animated: true)
+                case .failure(let error):
+                    self?.showAlert(title: "Error", message: error.localizedDescription)
+                }
+            }
+        }
+    }
+
+    private func showAlert(title: String, message: String) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+
     
 
     /*
