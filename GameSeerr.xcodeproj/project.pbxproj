@@ -25,7 +25,6 @@
 		05EC3E092EB5DDD200103816 /* ReviewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E082EB5DDD200103816 /* ReviewsRepository.swift */; };
 		05EC3E0B2EB5DDE700103816 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E0A2EB5DDE700103816 /* Game.swift */; };
 		05EC3E0F2EB5DE1100103816 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E0E2EB5DE1100103816 /* Review.swift */; };
-		05EC3E112EB5DE2000103816 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E102EB5DE1F00103816 /* User.swift */; };
 		05EC3E132EB5DE9200103816 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E122EB5DE9200103816 /* FirebaseManager.swift */; };
 		05EC3E192EB5DF3400103816 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E182EB5DF3400103816 /* GameDetailViewController.swift */; };
 		05EC3E1B2EB5DF4C00103816 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3E1A2EB5DF4C00103816 /* AddReviewViewController.swift */; };
@@ -51,7 +50,6 @@
 		05EC3E082EB5DDD200103816 /* ReviewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsRepository.swift; sourceTree = "<group>"; };
 		05EC3E0A2EB5DDE700103816 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		05EC3E0E2EB5DE1100103816 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		05EC3E102EB5DE1F00103816 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		05EC3E122EB5DE9200103816 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		05EC3E182EB5DF3400103816 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		05EC3E1A2EB5DF4C00103816 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			children = (
 				05EC3E0A2EB5DDE700103816 /* Game.swift */,
 				05EC3E0E2EB5DE1100103816 /* Review.swift */,
-				05EC3E102EB5DE1F00103816 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,7 +250,6 @@
 				05EC3E0F2EB5DE1100103816 /* Review.swift in Sources */,
 				05EC3E192EB5DF3400103816 /* GameDetailViewController.swift in Sources */,
 				05EC3DD52EB5D40A00103816 /* AppDelegate.swift in Sources */,
-				05EC3E112EB5DE2000103816 /* User.swift in Sources */,
 				05654ED12ED6AC9F00A7F2C2 /* RatingsBackfillService.swift .swift in Sources */,
 				05EC3E1D2EB5E88700103816 /* Extensions.swift in Sources */,
 				05EC3DD72EB5D40A00103816 /* SceneDelegate.swift in Sources */,

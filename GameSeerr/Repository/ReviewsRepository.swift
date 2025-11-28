@@ -8,6 +8,13 @@ protocol ReviewsRepository {
         completion: @escaping (Result<[Review], Error>) -> Void
     )
 
+    /// Fetch this user's review for a specific game (if it exists)
+    func fetchUserReview(
+        gameId: String,
+        userId: String,
+        completion: @escaping (Result<Review?, Error>) -> Void
+    )
+
     func addReview(
         gameId: String,
         userId: String,
@@ -41,8 +48,7 @@ final class FirestoreReviewsRepository: ReviewsRepository {
         return docs.compactMap { Review(id: $0.documentID, data: $0.data()) }
     }
 
-
-    // MARK: - FETCH
+    // MARK: - FETCH (all reviews for a game)
     func fetchForGame(
         gameId: String,
         completion: @escaping (Result<[Review], Error>) -> Void
@@ -59,8 +65,33 @@ final class FirestoreReviewsRepository: ReviewsRepository {
             }
     }
 
+    // MARK: - FETCH USER REVIEW (check if user already reviewed this game)
+    func fetchUserReview(
+        gameId: String,
+        userId: String,
+        completion: @escaping (Result<Review?, Error>) -> Void
+    ) {
+        db.collection("reviews")
+            .whereField("gameId", isEqualTo: gameId)
+            .whereField("userId", isEqualTo: userId)
+            .limit(to: 1)
+            .getDocuments { snap, err in
+                if let err = err {
+                    completion(.failure(err))
+                    return
+                }
 
-    // MARK: - ADD
+                guard let doc = snap?.documents.first else {
+                    completion(.success(nil))   // user has no review for this game
+                    return
+                }
+
+                let review = Review(id: doc.documentID, data: doc.data())
+                completion(.success(review))
+            }
+    }
+
+    // MARK: - ADD (with duplicate check)
     func addReview(
         gameId: String,
         userId: String,
@@ -68,27 +99,49 @@ final class FirestoreReviewsRepository: ReviewsRepository {
         body: String,
         completion: @escaping (Result<Void, Error>) -> Void
     ) {
-        let now = FieldValue.serverTimestamp()
+        // First check if this user already reviewed this game
+        fetchUserReview(gameId: gameId, userId: userId) { [weak self] result in
+            guard let self = self else { return }
 
-        let data: [String: Any] = [
-            "gameId": gameId,
-            "userId": userId,
-            "rating": rating,
-            "body": body,
-            "createdAt": now,
-            "updatedAt": now
-        ]
-
-        db.collection("reviews").addDocument(data: data) { [weak self] error in
-            if let error = error {
+            switch result {
+            case .failure(let error):
                 completion(.failure(error))
-                return
-            }
 
-            self?.recalculateAverage(forGameId: gameId, completion: completion)
+            case .success(let existing):
+                if existing != nil {
+                    // Duplicate found → return a friendly error
+                    let err = NSError(
+                        domain: "duplicateReview",
+                        code: 1,
+                        userInfo: [NSLocalizedDescriptionKey: "You have already reviewed this game."]
+                    )
+                    completion(.failure(err))
+                    return
+                }
+
+                // No duplicate → proceed to add new review
+                let now = FieldValue.serverTimestamp()
+
+                let data: [String: Any] = [
+                    "gameId": gameId,
+                    "userId": userId,
+                    "rating": rating,
+                    "body": body,
+                    "createdAt": now,
+                    "updatedAt": now
+                ]
+
+                self.db.collection("reviews").addDocument(data: data) { error in
+                    if let error = error {
+                        completion(.failure(error))
+                        return
+                    }
+
+                    self.recalculateAverage(forGameId: gameId, completion: completion)
+                }
+            }
         }
     }
-
 
     // MARK: - UPDATE
     func updateReview(
@@ -125,7 +178,6 @@ final class FirestoreReviewsRepository: ReviewsRepository {
         }
     }
 
-
     // MARK: - DELETE
     func deleteReview(
         id: String,
@@ -143,7 +195,6 @@ final class FirestoreReviewsRepository: ReviewsRepository {
             self?.recalculateAverage(forGameId: gameId, completion: completion)
         }
     }
-
 
     // MARK: - Recalculate Average Rating
     private func recalculateAverage(
