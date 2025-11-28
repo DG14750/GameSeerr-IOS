@@ -10,6 +10,7 @@
 		053313142EBA289E009EA61E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053313132EBA289E009EA61E /* HomeViewController.swift */; };
 		053313182EBAB2EB009EA61E /* GameCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053313172EBAB2EB009EA61E /* GameCardCell.swift */; };
 		0533131A2EBB1274009EA61E /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053313192EBB1274009EA61E /* WishlistViewController.swift */; };
+		05654ED12ED6AC9F00A7F2C2 /* RatingsBackfillService.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 05654ED02ED6AC9F00A7F2C2 /* RatingsBackfillService.swift .swift */; };
 		05EC3DD52EB5D40A00103816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD42EB5D40A00103816 /* AppDelegate.swift */; };
 		05EC3DD72EB5D40A00103816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD62EB5D40A00103816 /* SceneDelegate.swift */; };
 		05EC3DD92EB5D40A00103816 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC3DD82EB5D40A00103816 /* LoginViewController.swift */; };
@@ -35,6 +36,7 @@
 		053313132EBA289E009EA61E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		053313172EBAB2EB009EA61E /* GameCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardCell.swift; sourceTree = "<group>"; };
 		053313192EBB1274009EA61E /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
+		05654ED02ED6AC9F00A7F2C2 /* RatingsBackfillService.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RatingsBackfillService.swift .swift"; sourceTree = "<group>"; };
 		05EC3DD12EB5D40A00103816 /* GameSeerr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSeerr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EC3DD42EB5D40A00103816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05EC3DD62EB5D40A00103816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				05EC3E1C2EB5E88700103816 /* Extensions.swift */,
+				05654ED02ED6AC9F00A7F2C2 /* RatingsBackfillService.swift .swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				05EC3E192EB5DF3400103816 /* GameDetailViewController.swift in Sources */,
 				05EC3DD52EB5D40A00103816 /* AppDelegate.swift in Sources */,
 				05EC3E112EB5DE2000103816 /* User.swift in Sources */,
+				05654ED12ED6AC9F00A7F2C2 /* RatingsBackfillService.swift .swift in Sources */,
 				05EC3E1D2EB5E88700103816 /* Extensions.swift in Sources */,
 				05EC3DD72EB5D40A00103816 /* SceneDelegate.swift in Sources */,
 				0533131A2EBB1274009EA61E /* WishlistViewController.swift in Sources */,

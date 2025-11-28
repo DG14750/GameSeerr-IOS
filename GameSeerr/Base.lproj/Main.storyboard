@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -309,25 +310,32 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Eur-xI-Y6s">
                                                                     <rect key="frame" x="0.0" y="31" width="238" height="20.5"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" ambiguous="YES" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLU-mY-5Xg" userLabel="genreLabel">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLU-mY-5Xg" userLabel="genreLabel">
                                                                             <rect key="frame" x="0.0" y="0.0" width="166.5" height="20.5"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46.5" id="LjO-jB-2Vv"/>
+                                                                            </constraints>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <color key="textColor" name="text.secondary"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <view contentMode="scaleToFill" horizontalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n9J-Yp-51B">
+                                                                        <view contentMode="scaleToFill" horizontalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="n9J-Yp-51B">
                                                                             <rect key="frame" x="174.5" y="0.0" width="1" height="20.5"/>
                                                                             <color key="backgroundColor" name="bg.card"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="1" id="Y2F-dc-5kA"/>
                                                                             </constraints>
                                                                         </view>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" ambiguous="YES" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wJt-7o-IWs" userLabel="Star image">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wJt-7o-IWs" userLabel="Star image">
                                                                             <rect key="frame" x="183.5" y="-0.5" width="22" height="20.5"/>
                                                                             <color key="tintColor" name="AccentColor"/>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" ambiguous="YES" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoC-ab-GSM" userLabel="Rating">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoC-ab-GSM" userLabel="Rating">
                                                                             <rect key="frame" x="213.5" y="0.0" width="24.5" height="20.5"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="24.5" id="JUm-Ro-AZ6"/>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24.5" id="r16-bF-iVb"/>
+                                                                            </constraints>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <color key="textColor" name="text.secondary"/>
                                                                             <nil key="highlightedColor"/>
@@ -756,7 +764,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bmb-av-BRZ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rNj-4Q-Uqd"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Review" id="rNj-4Q-Uqd">
+                            <connections>
+                                <segue destination="kTR-oP-294" kind="presentation" identifier="showAddReview" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="9eq-54-7nF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="aboutLabel" destination="IaA-wx-WDR" id="DH2-6x-Czv"/>
@@ -778,6 +790,112 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIA-tJ-kh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3596" y="-761.46926536731644"/>
+        </scene>
+        <!--Add Review View Controller-->
+        <scene sceneID="eNl-CX-Gub">
+            <objects>
+                <viewController storyboardIdentifier="AddReview" id="kTR-oP-294" customClass="AddReviewViewController" customModule="GameSeerr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TE7-to-lSx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3v-DS-ObU" userLabel="CardView">
+                                <rect key="frame" x="24" y="177.5" width="327" height="312.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="veq-fN-z5y">
+                                        <rect key="frame" x="16" y="16" width="295" height="280.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="TitleLabel" text="Add Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPe-Y3-f78">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" name="text.primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="RatingStack" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xgC-4W-WD8">
+                                                <rect key="frame" x="0.0" y="40" width="295" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="RatingLabel" text="Rating: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pju-51-iXQ">
+                                                        <rect key="frame" x="0.0" y="6.5" width="227" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="text.secondary"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="RatingTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(0–5)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lGa-gb-q4K">
+                                                        <rect key="frame" x="235" y="0.0" width="60" height="34"/>
+                                                        <color key="backgroundColor" name="ui.field"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="aSj-Zg-1Bg"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="BodyText" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="89R-cy-AbQ">
+                                                <rect key="frame" x="0.0" y="90" width="295" height="140"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="9S2-9U-ng0"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="ButtonsStack" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5Ec-bt-K8m">
+                                                <rect key="frame" x="0.0" y="246" width="295" height="34.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qL3-XC-dqb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="141.5" height="34.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                                        <connections>
+                                                            <action selector="cancelTapped:" destination="kTR-oP-294" eventType="touchUpInside" id="y27-t7-Jfd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-pK-vge">
+                                                        <rect key="frame" x="153.5" y="0.0" width="141.5" height="34.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                                        <connections>
+                                                            <action selector="saveTapped:" destination="kTR-oP-294" eventType="touchUpInside" id="PMO-Ms-5ig"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="bg.card"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="veq-fN-z5y" secondAttribute="trailing" constant="16" id="4i3-5q-D3N"/>
+                                    <constraint firstItem="veq-fN-z5y" firstAttribute="top" secondItem="y3v-DS-ObU" secondAttribute="top" constant="16" id="Hym-Pf-YJv"/>
+                                    <constraint firstAttribute="bottom" secondItem="veq-fN-z5y" secondAttribute="bottom" constant="16" id="LBy-Jd-SMw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="iaX-my-XD7"/>
+                                    <constraint firstItem="veq-fN-z5y" firstAttribute="leading" secondItem="y3v-DS-ObU" secondAttribute="leading" constant="16" id="mOg-zS-uXS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Hk-ue-RG7"/>
+                        <color key="backgroundColor" name="bg.canvas"/>
+                        <constraints>
+                            <constraint firstItem="3Hk-ue-RG7" firstAttribute="trailing" secondItem="y3v-DS-ObU" secondAttribute="trailing" constant="24" id="25H-pT-W3R"/>
+                            <constraint firstItem="y3v-DS-ObU" firstAttribute="centerY" secondItem="3Hk-ue-RG7" secondAttribute="centerY" id="58S-O1-Rk4"/>
+                            <constraint firstItem="y3v-DS-ObU" firstAttribute="centerX" secondItem="3Hk-ue-RG7" secondAttribute="centerX" id="P5c-iR-agx"/>
+                            <constraint firstItem="y3v-DS-ObU" firstAttribute="leading" secondItem="3Hk-ue-RG7" secondAttribute="leading" constant="24" id="pif-ND-Z51"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bodyTextView" destination="89R-cy-AbQ" id="8qA-2a-mrJ"/>
+                        <outlet property="cardView" destination="y3v-DS-ObU" id="Mdu-zb-fJI"/>
+                        <outlet property="ratingTextField" destination="lGa-gb-q4K" id="gx0-40-oSa"/>
+                        <outlet property="submitButton" destination="Ozw-pK-vge" id="Ga6-q1-2Vk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nr7-FT-jz3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4448" y="-761"/>
         </scene>
         <!--Home-->
         <scene sceneID="7f8-Q5-iSd">
@@ -854,5 +972,11 @@
         <namedColor name="ui.field">
             <color red="0.059000000357627869" green="0.13300000131130219" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
